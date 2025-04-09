@@ -1,4 +1,83 @@
+/* Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Variables */
+:root{
+    /* Colors */
+    --black: #1C232B;
+    --grey: #6C7289;
+    --cream: #F2EAE2;
+    --white: #FFF;
+    --green-500: #3D8168;
+    --green-700: #1A4032;
+    
+    /* Spacing */
+    --spacing-500: 2.5em;
+    --spacing-400: 2em;
+    --spacing-300: 1.5em;
+    --spacing-200: 1em;
+    --spacing-100: .5em;
+    --spacing-50: .25em;
+}
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+/* Text Presets */
+.text-preset-1{
+    font-family: "Fraunces", serif;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+.text-preset-2{
+    font-family: "Montserrat", serif;
+    font-weight: bold;
+    font-size: .875rem;
+    line-height: 110%;
+    letter-spacing: 0;
+}
+
+.text-preset-3{
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 160%;
+    letter-spacing: 0;
+}
+
+.text-preset-4{
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: .75rem;
+    line-height: 120%;
+    letter-spacing: .3125rem;
+}
+
+.text-preset-5{
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: .8125rem;
+    line-height: 120%;
+    letter-spacing: .0;
+}
+
+/* CSS Reset */
+*{
+    box-sizing: border-box
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* General Styles */
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    display: none;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
