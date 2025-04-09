@@ -85,7 +85,7 @@ body{
 }
 
 .container{
-    margin-top: 8rem;
+    margin-top: 8em;
     background-color: var(--white);
     border-radius: .5rem;
     display: flex;
@@ -169,6 +169,7 @@ body{
 
 @media (min-width: 48rem) {
     .container{
+        margin-top: 0;
         flex-direction: row;
         max-width: 600px;
         max-height: 450px;
