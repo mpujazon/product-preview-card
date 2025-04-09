@@ -12,19 +12,19 @@
     --green-700: #1A4032;
     
     /* Spacing */
-    --spacing-500: 2.5em;
-    --spacing-400: 2em;
-    --spacing-300: 1.5em;
-    --spacing-200: 1em;
-    --spacing-100: .5em;
-    --spacing-50: .25em;
+    --spacing-500: 40px;
+    --spacing-400: 32px;
+    --spacing-300: 24px;
+    --spacing-200: 16px;
+    --spacing-100: 8px;
+    --spacing-50: 4px;
 }
 
 /* Text Presets */
 .text-preset-1{
     font-family: "Fraunces", serif;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 32px;
     line-height: 100%;
     letter-spacing: 0;
 }
@@ -32,7 +32,7 @@
 .text-preset-2{
     font-family: "Montserrat", serif;
     font-weight: bold;
-    font-size: .875rem;
+    font-size: 14px;
     line-height: 110%;
     letter-spacing: 0;
 }
@@ -40,7 +40,7 @@
 .text-preset-3{
     font-family: "Montserrat", serif;
     font-weight: 500;
-    font-size: .875rem;
+    font-size: 14px;
     line-height: 160%;
     letter-spacing: 0;
 }
@@ -48,15 +48,15 @@
 .text-preset-4{
     font-family: "Montserrat", serif;
     font-weight: 500;
-    font-size: .75rem;
+    font-size: 12px;
     line-height: 120%;
-    letter-spacing: .3125rem;
+    letter-spacing: 5px;
 }
 
 .text-preset-5{
     font-family: "Montserrat", serif;
     font-weight: 500;
-    font-size: .8125rem;
+    font-size: 13px;
     line-height: 120%;
     letter-spacing: .0;
 }
@@ -73,11 +73,109 @@ html, body{
 }
 
 /* General Styles */
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--cream);
+    color: var(--black);
+    padding: 5em .75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: var(--white);
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image{
+    width: 100%;
+    border-radius: .5rem .5rem 0 0;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center 11%;
+}
+
+/* Margin to 0, I'll use flexbox gap*/
+.product-category, .product-name, .product-description, .price-box, .btn{
+    margin: 0;
+}
+.product-info{
+    padding: var(--spacing-400);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
+.product-category{
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+.product-description{
+    color: gray;
+}
+
+.price-box{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: var(--spacing-200);
+}
+
+.product-price{
+    color: var(--green-500);
+}
+
+.product-old-price{
+    color: var(--grey);
+    text-decoration: line-through;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-50);
+    padding: 1.0938em 4em;
+    background-color: var(--green-500);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.btn:hover{
+    background-color: var(--green-700);
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
 
 .attribution { 
-    font-size: 11px; text-align: center;
+    font-size: .6875rem; text-align: center;
     display: none;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 48rem) {
+    .container{
+        flex-direction: row;
+        max-width: 600px;
+        max-height: 450px;
+    }
+
+    .product-image{
+        width: 50%;
+        border-radius: .5rem 0 0 .5rem;
+        aspect-ratio: initial;
+    }
 }
